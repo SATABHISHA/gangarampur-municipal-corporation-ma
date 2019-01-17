@@ -65,6 +65,7 @@ public class CareerActivityHome extends AppCompatActivity{
     }
 
     //===============load data from server code starts=============
+    
     public void loadData(){
         String url = "http://gangarampur.sambadsaradin.com/Gangarampur_ci/api/fetch_career";
         final ProgressDialog loading = ProgressDialog.show(CareerActivityHome.this, "Loading", "Please wait...", true, false);
