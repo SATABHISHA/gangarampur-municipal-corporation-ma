@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp">
+        <!--    <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/input_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="18dp"
+                    android:hint="Enter type" />
+            </android.support.design.widget.TextInputLayout> -->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/spinner_complain_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Complaint type"
+                android:textColorHint="#05ab9a"
+                android:textSize="18dp"
+                app:met_floatingLabel="normal" />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="18dp"
+                    android:hint="Full Name" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18dp"
+                    android:singleLine="true"
+                    android:hint="Email" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/input_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="18dp"
+                    android:inputType="number"
+                    android:hint="Phone" />
+            </android.support.design.widget.TextInputLayout>
+        <!--    <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_ward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/input_ward"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="18dp"
+                    android:hint="Ward no." />
+            </android.support.design.widget.TextInputLayout> -->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/spinner_ward_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Ward No."
+                android:textSize="18dp"
+                android:textColorHint="#05ab9a"
+                app:met_floatingLabel="normal" />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/input_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textSize="18dp"
+                    android:maxLines="10"
+                    android:hint="Address" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--   <EditText
+                       android:id="@+id/input_desc"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:singleLine="true"
+                       android:hint="Description" /> -->
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/nested_scroll_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="#d6d8d9"
+                    android:layout_marginTop="10dp">
+                    <MultiAutoCompleteTextView
+                        android:id="@+id/input_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        android:background="#00000000"
+                        android:textSize="18dp"
+                        android:hint="Enter Description"/>
+                </android.support.v4.widget.NestedScrollView>
+            </android.support.design.widget.TextInputLayout>
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:src="@mipmap/ic_launcher"/>
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:text="Upload Image"/>
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp"
+                android:text="Submit"/>
+        </LinearLayout>
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

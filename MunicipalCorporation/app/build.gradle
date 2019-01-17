@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "org.municipal.myapplication"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    useLibrary 'org.apache.http.legacy'
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    sourceSets {
+        main {
+            res.srcDirs = ['src/main/res', 'src/main/res/layouts', 'src/main/res/layouts/activity', 'src/main/res/layouts/fragment', 'src/main/res/layouts/home', 'src/main/res/layouts/complaint', 'src/main/res/layouts/notice', 'src/main/res/layouts/event', 'src/main/res/layouts/tender', 'src/main/res/layouts/career', 'src/main/res/facility', 'src/main/res/layouts/facility', 'src/main/res/layouts/recentwork']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+//    implementation 'com.android.support:recyclerview-v7:27.1.0'
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
+    //    implementation 'dev.dworks.libs:volleyplus:+'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'pub.devrel:easypermissions:0.2.0'
+    //Easy permissions for handling Run time permissions
+    implementation 'com.weiwangcn.betterspinner:library-material:1.1.0' //for material spinner
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1' //for sliding image
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //---added on 8th jan for multipart, code starts-----
+    implementation('org.apache.httpcomponents:httpmime:4.3.6') {
+        exclude module: 'httpclient'
+    }
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5'
+    //---added on 8th jan for multipart, code ends-----
+}

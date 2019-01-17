@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home1"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_notice"
+            android:icon="@drawable/complaint"
+            android:title="Notice" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/events"
+            android:title="Events" />
+        <item
+            android:id="@+id/nav_tender"
+            android:icon="@drawable/tender"
+            android:title="Tender" />
+        <item
+            android:id="@+id/nav_career"
+            android:icon="@drawable/career"
+            android:title="Career" />
+        <item
+            android:id="@+id/nav_facility"
+            android:icon="@drawable/facility"
+            android:title="Facility" />
+        <item
+            android:id="@+id/nav_recent_work"
+            android:icon="@drawable/complaint"
+            android:title="Recent Work" />
+        <item
+            android:id="@+id/nav_complaint"
+            android:icon="@drawable/complaint"
+            android:title="Complaint" />
+        <item
+            android:id="@+id/nav_view_complaint"
+            android:icon="@drawable/viewcomplaint"
+            android:title="View Complain" />
+    </group>
+
+   <!-- <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item> -->
+
+</menu>

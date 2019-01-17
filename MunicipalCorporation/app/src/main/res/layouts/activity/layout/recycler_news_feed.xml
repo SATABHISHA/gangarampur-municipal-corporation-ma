@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="5dp"
+        app:cardElevation="1dp"
+        app:cardUseCompatPadding="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-smallcaps"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#000000"
+        android:text="Abc hfhfhf hfhf hfhf bfhfh bfhfhf bfhhf bfhf bfhfb fbfbbf"/>
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="15dp"
+            android:textColor="#414141"
+            android:text="It was the city’s first brush with a deadline of bursting fi .. Read more at:uesday evening, as the city readied to worship Goddess Kali,NGOs across the state said the SC two-hour window for bursti .."/>
+    </LinearLayout>
+</LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
