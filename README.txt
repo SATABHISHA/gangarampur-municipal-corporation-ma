@@ -17,6 +17,7 @@ Existing folder
 cd existing_folder
 git init
 git remote add origin https://gitlab.com/Satabhisha/doctor-booking.git
+git pull origin master
 git add .
 git commit -m "Initial commit"
 git push -u origin master
