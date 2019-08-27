@@ -62,3 +62,10 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
+
+
+//-----------to add Package.Swift following are the commands----------
+1)swift package init(run in terminal at root folder of the project)
+2)add package in Package.Swift
+3)swift build
+4)swift package generate-xcodeproj
